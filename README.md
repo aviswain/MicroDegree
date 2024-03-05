@@ -19,4 +19,4 @@ I am posting these to make the material I'm learning in college available to all
 - Haikyu!!
 
 ### Can't watch an episode?
-Bro why'd you do this to yourself...get back to studying.
+Bro...all I gotta say is you did this to yourself... just get back to studying.
