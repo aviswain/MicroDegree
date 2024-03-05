@@ -3,7 +3,7 @@
 
 **Course Name**: Introduction to Computer Science II (Data Structures)
 
-**Professor**: Carey Nachenberg
+**Professor**: Carey Nachenberg and David Smallberg
 
 **Academic Term**: Winter 2024
 
