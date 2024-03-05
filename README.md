@@ -9,6 +9,9 @@ I am posting these to make the material I'm learning in college available to all
 - Moneyball
 - 12th Fail
 - Creed 1, 2, and 3
+- Ride Along 1 and 2
+- Rush 1, 2, and maybe 3 (although 3 wasn't amazing)
+- Fast and Furious: Tokyo Drift
 
 ### Can't Watch a Movie? Watch an Episode of..
 - Silicon Valley
