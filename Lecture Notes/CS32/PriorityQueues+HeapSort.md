@@ -59,6 +59,7 @@ If you follow the steps below, when you're done, the heap's organization should 
 5. Repeat steps 3-4 until the new value rises to its proper place. ("Reheapification")
 
 ## Implementing a Heap
+
 Trying to implement a heap using classic binary tree nodes can be hard cause
 - It's not easy to locate the bottom-most, right-most node during extraction
 - It's not easy to locate the bottom-most, left-most node for insertion
