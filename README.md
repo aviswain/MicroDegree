@@ -1,6 +1,6 @@
 These are all the notes that I have taken as an undergraduate Computer Science and Engineering major at UCLA.
 
-I'm not posting hw assignments or project specs on here cause I view that as the school's intellectual property. I might post some projects I implement here and there though because I hear those change from year to year!
+I'm not posting hw assignments or project specs on here cause I view that as the school's intellectual property. I might post some projects I implement though because I hear those change from year to year!
 
 I am just posting this here to make the material I'm learning here available to all!
 
