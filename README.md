@@ -16,3 +16,7 @@ I am posting these to make the material I'm learning in college available to all
 ### Can't Watch a Movie? Watch an Episode of..
 - Silicon Valley
 - The Last Dance
+- Haikyu!!
+
+### Can't watch an episode?
+Bro why'd you do this to yourself...get back to studying.
