@@ -1,7 +1,10 @@
 ## Class Information
 **Course ID**: Computer Science 32
+
 **Course Name**: Introduction to Computer Science II (Data Structures)
+
 **Professor**: Carey Nachenberg
+
 **Academic Term**: Winter 2024
 
 Other Information
