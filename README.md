@@ -22,4 +22,4 @@ I won't be posting hw assignments or project specs on here cause I view that as 
 - Haikyu!!
 
 ### Can't watch an episode?
-Bro...all I gotta say is you did this to yourself... just get back to studying.
+Bro...all I gotta say is you did this to yourself... get back to studying!
