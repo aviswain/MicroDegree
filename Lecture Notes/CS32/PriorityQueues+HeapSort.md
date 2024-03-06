@@ -65,8 +65,13 @@ Trying to implement a heap using classic binary tree nodes can be hard cause
 - It's not easy to locate the bottom-most, left-most node for insertion
 - It's not easy to locate a node's parent to do reheapification swaps
 
+So something we can do instead is implement it by using an array! We can do this because we know that each level of the tree has 2x the number of nodes of the previous level (except for the bottom-most level). So we can just copy our nodes a level at a time into an array. This means the root node value goes into the first slot of the array (heap[0]), the next two node values go into the second and third slots of the array, the next four values go into the next four slots and so on...
 
+This gives us a few useful properties:
+- We can always find the root value in `heap[0]`
+- We can always find the bottom-most, right-most node in `heap[count-1]`
+- We can always find the bottom-most, right-most node in `heap[count]`
+- We can add or remove a node by simply setting `heap[count] = value;` or updating `count`
 
--    When extracting from a max heap why do we have to copy the bottom-most, right-most node to the root node? Why not just save the root node, and then move the greatest elements upward to fill its spot? Is this because we have to keep the "complete" tree structure? If so, why is it so important that we keep the complete tree structure?
-- 
+When extracting from a max heap why do we have to copy the bottom-most, right-most node to the root node? Why not just save the root node, and then move the greatest elements upward to fill its spot? Is this because we have to keep the "complete" tree structure? If so, why is it so important that we keep the complete tree structure?
 
