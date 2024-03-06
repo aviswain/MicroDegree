@@ -58,7 +58,7 @@ If you follow the steps below, when you're done, the heap's organization should 
 4. If the new value is greater than its parent's value, swap them.
 5. Repeat steps 3-4 until the new value rises to its proper place. ("Reheapification")
 
-## Implementing a Heap
+## How to Implement a Heap
 
 Trying to implement a heap using classic binary tree nodes can be hard cause
 - It's not easy to locate the bottom-most, right-most node during extraction
@@ -72,6 +72,56 @@ This gives us a few useful properties:
 - We can always find the bottom-most, right-most node in `heap[count-1]`
 - We can always find the bottom-most, right-most node in `heap[count]`
 - We can add or remove a node by simply setting `heap[count] = value;` or updating `count`
+
+Furthermore, if a parent is in slot j of the array, we can locate their childrens' slots by...
+- Left Child: `heap[(2 * j) + 1]`
+- Right Child: `heap[(2 * j) + 2]`
+
+And if we want to locate the slot for a parent node from its child node (in slot k) then we can do...
+- Parent: `heap[(k-1) / 2]`
+
+### The Actual Implementation
+
+Extracting top node from a maxheap
+```
+cpp
+
+int extractFromMaxHeap(int heap[], int& count) {
+  if (count == 0)
+    return(-1); // return error
+
+  int largestVal = heap[0];
+
+  if (count == 1) {
+    count = 0;
+  } else {
+    heap[0] = heap[count-1];
+    count--;
+
+    // repeatedly swap
+  }
+
+  return largestVal;
+}
+```
+
+Adding a node to a maxheap
+```
+cpp
+
+void insertToMaxHeap(int val, int heap[], int& count) {
+  heap[count] = val;
+  count++;
+
+  // compare the new value with values in the map to find the correct position for it
+}
+```
+
+## Big-O Complexity of the Heap
+
+Cost of inserting a new item: O(log2(N))
+
+_Calculation: If you have complete binary tree with N entries, it's guaranteed to be exactly log2(N) levels deep. So in the worst case we have to do log2(N) comparisons and swaps of our new value (regardless of whether it is stored in an array)._
 
 When extracting from a max heap why do we have to copy the bottom-most, right-most node to the root node? Why not just save the root node, and then move the greatest elements upward to fill its spot? Is this because we have to keep the "complete" tree structure? If so, why is it so important that we keep the complete tree structure?
 
