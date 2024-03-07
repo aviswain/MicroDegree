@@ -247,13 +247,13 @@ Quick Facts
 - All initial elements are automatically initialized and constructed (for example, a vector of ints will start out with its values initialized to zero)
 
 Operations
-`.push_back(...);`: adds a new item to the end of a vector
-`.front();`: reads the first element in the vector
-`.back();`: reads the last element in the vector
-`vals[i]`: accesses the ith elment of the vector (can only be used to access existing elements...cannot be used to add new items to the end)
-`.popback()`: removes an item from the back of the vector
-`.size()`: get the current number of elements in a vector (remember this function does not work for arrays!)
-`.empty()`: determine if the vector is empty
+- `.push_back(...);`: adds a new item to the end of a vector
+- `.front();`: reads the first element in the vector
+- `.back();`: reads the last element in the vector
+- `vals[i]`: accesses the ith elment of the vector (can only be used to access existing elements...cannot be used to add new items to the end)
+- `.popback()`: removes an item from the back of the vector
+- `.size()`: get the current number of elements in a vector (remember this function does not work for arrays!)
+- `.empty()`: determine if the vector is empty
 
 ```
 .cpp
