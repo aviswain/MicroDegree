@@ -245,6 +245,9 @@ Here are some other cool containers...
 Quick Facts
 - Just think of it as an array that can grow and shrink automatically when you add/remove items
 - All initial elements are automatically initialized and constructed (for example, a vector of ints will start out with its values initialized to zero)
+- Internally, vectors are implemented using dynamically allocated arrays. This means once you add enough elements, the vector will object will need a bigger allocated array. So when
+  it does, it will allocate a larger array, copy over all the values, and delete the old smaller array. So once in a while, it might take a long time to just "add" an element to the
+  vector.
 
 Operations
 - `.push_back(...);` adds a new item to the end of a vector
@@ -252,8 +255,10 @@ Operations
 - `.back();` reads the last element in the vector
 - `vals[i]` accesses the ith elment of the vector (can only be used to access existing elements...cannot be used to add new items to the end)
 - `.popback()` removes an item from the back of the vector
-- `.size()` get the current number of elements in a vector (remember this function does not work for arrays!)
-- `.empty()` determine if the vector is empty
+- `.size()` gets the current number of elements in a vector (remember this function does not work for arrays!)
+- `.empty()` determines if the vector is empty
+
+**When to choose a vector**: Since vectors are based on dynamic arrays, they allow fast access to any element (via brackets) but adding new items is often slower.
 
 ```
 .cpp
@@ -272,3 +277,93 @@ int main() {
   strs.push_back("Scott");
 }
 ```
+### List
+- `.push_back(...);` adds a new item to the end of a list
+- `.front();` reads the first item in the list
+- `.back();` reads the last item in the list
+- `.popback()` removes an item from the back of the list
+- `.size()` gets the current number of items in a list
+- `.empty()` determines if the list is empty
+- `.push_front(...)` adds a new item to the front of a list
+- `.pop_front()` removes the front item of the list
+
+Notice that you cannot use brackets to access elements of a list!
+
+**When to Choose**: Since the STL list is based on a linked list, it offers fast insertion/deletion, but slow access to middle elements
+
+```
+#include <list>
+using namespace std;
+
+int main() {
+  list<float> lf;
+
+  lf.push_back(1.1);
+  lf.push_back(2.2);
+  lf.push_front(3.3);
+}
+```
+## Passing Containers to Functions
+When passing STL containers to functions, pass them by **const reference** when you don't want them to be modified and **reference** when you want to modify them. Don't pass them by value though because it will just create a copy of the whole container to operate on, which is slow.
+```
+void printVec(const vector<int>& v) {
+  for (int i = 0; i < v.size(); i++)
+    cout << v[i] << endl;
+}
+```
+Also, when you pass a container into a function as a const reference parameter, you can't use a regular iterator on it. You have to use a const iterator like this...
+```
+void tickleNerds(const list<string>& nerds) {
+  list<string>::const_iterator it;
+  for(it = nerds.begin(); it != nerds.end(); it++) {
+    cout << *it << " says teehee!\n";
+}
+```
+
+## Iterating Through STL Containers
+Except for the vector, none of the STL containers have an easy way of iterating through items (vector can use brackets `[]` to access elements). So what do we do?
+
+### Use an Iterator variable
+An iterator variable is like pointer but just for STL containers. You start by pointing it to some item in your container and then you increment and decrement it to move it up/down
+through a container's items. You can also use it to read/write each value it points to.
+
+Iterator example code:
+```
+.cpp
+
+int main() {
+  vector<int> myVec;
+  myVec.push_back(1234);
+  myVec.push_back(5);
+  myVec.push_back(7);
+
+  vector<int>::iterator it;
+
+  it = myVec.begin();
+  while (it != myVec.end()) {
+    cout << (*it);
+    it++;
+  }
+
+}
+```
+Keep in mind:
+- `myVec.end()` points just **past** the last item. If `.end();` pointed at the last item, then loops would miss the last item! If you want to point your iterator to the last item,
+  first do `it = myVec.end();` and then decrement it once by `it--;`.
+
+If you are using an iterator on a STL container holding classes or structs:
+```
+int main() {
+  list<Nerd> nerds;
+  Nerd d;
+
+  nerds.push_back(d);
+  list<Nerd>::iterator it;
+  it = nerds.begin();
+
+  (*it).beNerdy(); // either of these options work!
+  it->beNerdy();   // (*it).function() OR it->function()
+}
+```
+
+
