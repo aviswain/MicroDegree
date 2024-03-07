@@ -223,8 +223,6 @@ They can be used to save hours of programming!
 
 We have already seen a couple STL containers such as Stacks and Queues...
 ```
-.cpp
-
 #include <stack>
 #include <queue>
 using namespace std;
@@ -261,8 +259,6 @@ Operations
 **When to choose a vector**: Since vectors are based on dynamic arrays, they allow fast access to any element (via brackets) but adding new items is often slower.
 
 ```
-.cpp
-
 #include <vector>
 using namespace std;
 
@@ -305,8 +301,48 @@ int main() {
 ```
 
 ### Map
-Quick Facts
-- Maps allow us to associate two related values.
+- Maps allow us to associate two related values. For example, a map can associate a string to an int. But if you do make one in this way, you cannot then use the same map to
+  associate int to string. You must make a second map.
+- A map class works by storing each association into a struct variable.
+- Maps are maintained in alphabetical order based on the keys (no sorting required!)... so if your "first" data type is an object/class variable, you must define the < operator for
+  it so that the STL code knows how to maintain the map's order. 
+```
+#include <map>
+#include <string>
+using namespace std;
+
+int main() {
+  map<string,int> name2Age;
+  name2Age["Carey"] = 49;
+  name2Age["Dan"] = 22;
+  name2Age["David"] = 53;
+
+  name2Age["Carey"] = 39; // updates Carey's associated int from 49 -> 39
+}
+```
+
+### Set
+A set is a container that keeps track of unique items. Like a map, it is also alphabetically sorted! So if you make a set of objects/class variables, you need to also define the 
+< operator for that class.
+- `set<int> a;` defines the container
+- `.insert(...);` inserts an item into the set (if you try to insert a duplicate, it gets ignored)
+- `.size();` gets the size of the set
+- `erase(...);` erases a specific member of the set
+```
+#include <set>
+using namespace std;
+
+int main() {
+  set<int> a;
+  a.insert(2);
+  a.insert(3);
+  a.insert(4);
+  a.insert(2); // duplicate, so gets ignored
+  cout << a.size();
+
+  a.erase(2);
+}
+```
 ## Passing Containers to Functions
 When passing STL containers to functions, pass them by **const reference** when you don't want them to be modified and **reference** when you want to modify them. Don't pass them by value though because it will just create a copy of the whole container to operate on, which is slow.
 ```
@@ -355,6 +391,33 @@ Keep in mind:
 - `myVec.end()` points just **past** the last item. If `.end();` pointed at the last item, then loops would miss the last item! If you want to point your iterator to the last item,
   first do `it = myVec.end();` and then decrement it once by `it--;`.
 
+### Searching an STL map or set (not iterating)
+- `.find(...)` locates the pair in the map/set based on the value (looks at key-value for maps). If it cannot be found, it returns an iterator that points to the end of the map/set.
+- `first` refers to the key in the key-value pair
+- `second` refers to value in the key-value pair
+```
+#include <map>
+#include <string>
+using namespace std;
+
+int main() {
+  map<string,int> name2Age;
+  ...
+  map<string,int>::iterator it;
+
+  it = name2Age.find("Dan");
+
+  cout << it->first;
+  cout << it->second;
+
+  it = name2Age.find("Ziggy");
+  if (it == name2Age.end()) {
+    cout << "Not found!\n";
+    return;
+  }
+
+}
+```
 If you are using an iterator on a STL container holding classes or structs:
 ```
 int main() {
@@ -371,11 +434,95 @@ int main() {
 ```
 
 What exactly is an **iterator** anyways?
-
-Although an iterator sort of works like a pointer, its not one. An iterator is an object (class variable) that knows the following three things...
+Although an iterator sort of works like a pointer, it's not one. An iterator is an object (class variable) that knows the following three things...
 1. What element it points to
 2. How to find the previous element in the container
 3. How to find the next element in the container
 Depending on the container its operating on, these actions will be implemented in different ways.
+
+## Invalidated Iterators (after Deleting/Adding to an STL container)
+Most STL containers have an `erase()` method you can use to delete an item. First search for the item you want to delete and get an iterator to it. Then, if you found the item, use the `erase()` method to remove the item pointed to by the iterator. If you remove items with an iterator, it will be invalidated (because the container's size has been changed). To fix that, make sure to set your iterator equal to the erase statement, because your erase statement actual returns an iterator to the new variable in that spot!
+
+Here are two ways of fixing the invalidated pointer of erasing an item with it:
+```
+void removeOdd(list<int>& li) {
+    
+    list<int>::iterator it;
+    
+    for(it = li.begin(); it != li.end();){
+        if (*it % 2 == 1)
+            it = li.erase(it);
+        else
+            it++;
+    }
+}
+```
+```
+void removeOdd(vector<int>& v) {
+    vector<int>::iterator it;
+    it = v.begin();
+    
+    while (it != v.end()) {
+        if (*it % 2 == 1)
+            it = v.erase(it);
+        else
+            it++;
+    }
+}
+```
+If you add an item to the container after creating an iterator for it, then that iterator is invalidated and cannot be used after. This is because adding item might cause the container, such as a vector, to need to move all of items to a new part in memory for more space.
+## STL Algorithms
+STL also provides some additional functions (not all are mentioned here) that you can access by `#include <algorithm>`:
+- `find()` can search most STL containers and arrays for a value
+- `sort(...,...)` can sort arrays/vectors/lists for you! To use it, you pass in two iterators: one that points to the first item, and one that points just past the last item. This
+  can also be used on arrays (just pass in the address values for the first item and just past the last item). You can even have the function sort the container in a specific way for
+  you (see below).
+```
+#include <algorithm>
+
+class Dog {
+  public:
+    int getBark() { return m_barkVolume; }
+    int getBite() { return m_bitePain; }
+};
+
+// Make a function that returns...
+// TRUE if dog A should go BEFORE dog B
+// FALSE if dog A should go AFTER dog B
+bool customCompare(const Dog &a, const Dog &b) {
+  return a.getBark() > b.getBark();
+}
+
+int main() {
+  Dog arr[4] = {...};
+
+  // pass in the address of customCompare function as the 3rd parameter to sort
+  sort(arr, arr+4, &customCompare); 
+}
+}
+```
+## Compound STL Data Structures
+You can combine multiple STL containers to represent all sorts of complex associations. For example, let's say you want to maintain a list of courses for each UCLA student. How could you do this with STL? You could create a map between a student's name and their list of courses!
+```
+#include <map>
+#include <list>
+
+class Course {
+  public:
+    ...
+};
+
+int main() {
+  map<string, list<Course>> crsmap;
+
+  Course c1("cs","32"), c2("math","3b"), c3("english","1");
+
+  crsmap["carey"].push_back(c1);
+  crsmap["carey"].push_back(c2);
+  crsmap["david"].push_back(c1);
+  crsmap["david"].push_back(c3);
+}
+```
+
 
 
