@@ -50,7 +50,7 @@ Trees never have cycles while graphs may have cycles. This will make graph trave
 We have two ways of traversing through graphs:
 1. **Depth-First**: Keep moving forward until hitting a dead-end or a previously-visited vertex...then backtracks and tries another path.
 
-Implementation #1: Similar to pre-order tree traversal
+Implementation using traversal. Is similar to pre-order tree traversal.
 ```
 void depth_first(map<int, list<int>> &graph, int cur_vertex, set<int>& visited) {
   if (visited.find(cur_vertex) != visited.end())
@@ -65,13 +65,73 @@ void depth_first(map<int, list<int>> &graph, int cur_vertex, set<int>& visited) 
     depth_first(graph, *it, visited);
 } 
 ```
-Implementation #2: Using a stack (pseudocode)
-_Depth-First-Search-With-Stack(start_room)_
-_While the stack is not empty_
-  _Pop the top item off the stack and put it in variable c_
-    _If c hasn't been visted yet_
-
-
+Implementation using a stack (_in pseudocode_).
+```
+Depth-First-Search-With-Stack(start_room)
+  Push start_room on the stack
+  While the stack is not empty...
+    Pop the top item off the stack and put in variable c
+    If c hasn't been visited yet...
+      Drop a breadcrumb (we've visited the current room)
+        For each door d leaving the room...
+        If the room r behind door d hasn't been visited
+          Push r onto the stack.  
+```
 2. **Breadth-First**: Explore the graph in growing concentric circles, exploring all vertices 1 away from the start, then 2 away, then 3 away, etc.
+
+Implementation using queue
+```
+Breadth-First-Search(startVertex) {
+  Add the starting vertex to our queue
+  Mark the starting vertex as "discovered"
+  While the queue is not empty...
+    Dequeue the top vertex from the queue and place in c
+    Process vertex c (e.g. print its contents out)
+    For each vertex v directly reachable from c
+      If v has not yet been "discovered"
+        Mark v as "discovered"
+        Insert vertex v into the queue
+}
+```
+## Graphs with weighted edges and Dijkstra's Algorithm
+
+Dijkstra's Algorithm takes a graph in as input along with a starting node. It will then output the optimal distances from the starting node to every other node in the graph.
+
+**How it works**: I personally learned it before using the following video (https://www.youtube.com/watch?v=XB4MIexjvY0&t=820s) but here is the gist...
+
+1. Create two distinct sets to separate the nodes:
+  - **Unsettled nodes**: Nodes that we don't know the optimal distance to from the starting node
+  - **Settled nodes**: Nodes that we do know the optimal distance to from the starting node
+
+     _All nodes will start out as unsettled, and the algorithm will finish once all the nodes are in the settled set._
+
+2. Assume all nodes are infinitely far away at first. Starting at the starting node, fill in the distance for reaching itself (which should be zero).
+3. See which unsettled nodes you can reach directly from the node you are on and fill in the distances to reach them. Add them to the settled list.
+4. Travel/Go to the settled node that is closest to you.
+5. Repeat process 3 and 4 until all nodes are settled.
+
+### Implementing Dijktra's Algorithm
+The implementation uses 2 data structures:
+1. An array called "Dist" that holds the current best known cost to get from the starting node to every other node in the graph
+   - Each node `i` in `Dist[i]` starts out with a value of
+     - 0 if it is the starting node
+     - Infinity for all other nodes
+2. An array called "Done" that holds `true` for each node that has been fully processed, and `false` otherwise.
+   - Each node `i` in `Done[i]` starts out with the value `false`
+
+Mix of psuedocode and actual code
+```
+While there are still unprocessed nodes:
+  Set u, the closest unprocessed node, = to the starting node
+  Mark node u as processed: Done [u]
+  We now know how to reach u optimally from s
+  Loop through all unprocessed nodes:
+    Set v = the next unporcessed node
+    If there's an edge from u to v then compare:
+      a. the previously computed path from s to v (i.e. Dist[v]) OR b. the path from s to u, and then from u to v (i.e. Dist[u] + weight(u,v))
+      If the new cost is less than the old cost then set Dist[v] = Dist[u] + weight(u,v)
+```
+
+
 
 
