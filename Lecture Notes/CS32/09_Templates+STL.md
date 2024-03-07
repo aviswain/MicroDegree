@@ -303,6 +303,10 @@ int main() {
   lf.push_front(3.3);
 }
 ```
+
+### Map
+Quick Facts
+- Maps allow us to associate two related values.
 ## Passing Containers to Functions
 When passing STL containers to functions, pass them by **const reference** when you don't want them to be modified and **reference** when you want to modify them. Don't pass them by value though because it will just create a copy of the whole container to operate on, which is slow.
 ```
@@ -365,5 +369,13 @@ int main() {
   it->beNerdy();   // (*it).function() OR it->function()
 }
 ```
+
+What exactly is an **iterator** anyways?
+
+Although an iterator sort of works like a pointer, its not one. An iterator is an object (class variable) that knows the following three things...
+1. What element it points to
+2. How to find the previous element in the container
+3. How to find the next element in the container
+Depending on the container its operating on, these actions will be implemented in different ways.
 
 
