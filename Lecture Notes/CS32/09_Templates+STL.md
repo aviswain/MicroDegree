@@ -215,21 +215,24 @@ _This is yet another god-gifted infinity stone handed to us by the rock-climbing
   1. Put this in front of the class declaration: `class foo {...};` -> `template <typename ItemType> class foo{...};`
   2. Update appropriate types in the class to the new `ItemType`
   3. Update internally-define methods:
-     a. For normal methods, just update all types to ItemType: `int bar(int a){...}` -> `Itemtype bar(ItemType a){...}`
-     b. Assignment operator: `foo &operator=(const foo &other)` -> `foo<ItemType>& operator=(const foo<ItemType>& other)`
-     c. Copy constructor: `foo(const foo &other)` -> `foo(const foo<ItemType> &other)`
+      - For normal methods, just update all types to ItemType: `int bar(int a){...}` -> `Itemtype bar(ItemType a){...}`
+      - Assignment operator: `foo &operator=(const foo &other)` -> `foo<ItemType>& operator=(const foo<ItemType>& other)`
+      - Copy constructor: `foo(const foo &other)` -> `foo(const foo<ItemType> &other)`
   4. For each externally defined method:
-     a. For non inline methods: `int foo::bar(int a)` -> `template <typename ItemType> ItemType foo<ItemType>::bar(ItemType a)`
-     b. For inline methods: `inline int foo::bar(int a)` -> `template <typename ItemType> inline ItemType foo<ItemType>::bar(ItemType a)`
-     c. For copy constructors: `foo::foo(const foo &other)` -> `foo<ItemType>::foo(const foo<ItemType> &other)`
-     d. For assignment operators: `foo &foo::operator=(const foo &other)` -> `foo<ItemType>& foo<ItemType>::operator=(const foo<ItemType>& other)`
+      - For non inline methods: `int foo::bar(int a)` -> `template <typename ItemType> ItemType foo<ItemType>::bar(ItemType a)`
+      - For inline methods: `inline int foo::bar(int a)` -> `template <typename ItemType> inline ItemType foo<ItemType>::bar(ItemType a)`
+      - For copy constructors: `foo::foo(const foo &other)` -> `foo<ItemType>::foo(const foo<ItemType> &other)`
+      - For assignment operators: `foo &foo::operator=(const foo &other)` -> `foo<ItemType>& foo<ItemType>::operator=(const foo<ItemType>& other)`
   5. If you have an internally defined struct blah in a class: `class foo {...struct blah {int val;};...}`:
      a. Simply replace appropriate internal variables in your struct (e.g. `int val;`) with your ItemType (e.g. `ItemType val;`)
   6. If an internal method in a class is trying to return an internal struct (or a pointer to an internal struct):
      a. You don't need to change the function's declaration at all insde the class declaration; just update variables to your `ItemType`
   7. If an externally-defined method in a class is trying to return an internal struct (or a pointer to an internal struct):
      a. Assuming your internal structure is called "blah", update your external function bar definitions as follows:
-       i. `blah foo::bar(...){...}` -> template<typename ItemType
+      - `blah foo::bar(...){...}` -> `template<typename ItemType>typename foo<ItemType>::blah foo<ItemType>::bar(...) {...}`
+      - `blah *foo::bar(...){...}` -> `template<typename ItemType>typename foo<ItemType>::blah *foo<ItemType>::bar(...) {...}`
+- Try to pass templated items by const reference if you can (to improve performance):
+  1. 
 
 ## The Standard Template Library (STL)
 The STL is a collection of pre-written, tested classes by the authors of C++. The classes are built using templates, meaning they can be used with many different data types.
