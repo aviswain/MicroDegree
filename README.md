@@ -6,7 +6,7 @@ I won't be posting hw assignments or project specs on here cause I view that as 
 
 
 
-### Tired of Studying? Watch some of these movies!
+### Tired of Studying? Stressed out? Watch some of these movies!
 - The Last Samurai
 - Moneyball
 - 12th Fail
@@ -21,5 +21,8 @@ I won't be posting hw assignments or project specs on here cause I view that as 
 - The Last Dance
 - Haikyu!!
 
-### Can't watch an episode?
+### Can't watch an episode? How about a short YouTube video by..
+- Ryan Higa
+
+### Can't do that...
 Bro...all I gotta say is you did this to yourself... get back to studying!
