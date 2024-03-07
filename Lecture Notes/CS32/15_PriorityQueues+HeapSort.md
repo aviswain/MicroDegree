@@ -119,9 +119,28 @@ void insertToMaxHeap(int val, int heap[], int& count) {
 
 ## Big-O Complexity of the Heap
 
-Cost of inserting a new item: O(log2(N))
+Cost of inserting/extracting an item: O(log2(N))
 
 _Calculation: If you have complete binary tree with N entries, it's guaranteed to be exactly log2(N) levels deep. So in the worst case we have to do log2(N) comparisons and swaps of our new value (regardless of whether it is stored in an array)._
 
-When extracting from a max heap why do we have to copy the bottom-most, right-most node to the root node? Why not just save the root node, and then move the greatest elements upward to fill its spot? Is this because we have to keep the "complete" tree structure? If so, why is it so important that we keep the complete tree structure?
+## Heapsort
+Heapsort is O(Nlog2(N)) that uses a maxheap in a super clever way to sort a bunch of values. 
+
+This is how Heapsort goes:
+
+**STEP 1: Convert our input array into a maxheap**. Basically you are are just going to shuffle the values around in the input array so they become a maxheap. As we heapify higher
+subtrees, they rely upon the lower sub-trees that were heapified earlier! Once we have finishde heapifying from out root node, our entire array will hole a valid maxheap! This takes O(N) steps.
+```
+// PSUEDOCODE:
+// startNode = N/2 - 1
+//  for (curNode == lastNode thru rootNode)
+//    Focus on the subtree rooted at curNode
+//    Think of this subtree as a maxheap
+//    Keep shifting the top value down until your subtree becomes a valid maxheap
+```
+STEP 2: While there are numbers left in the heap: repeatedly extract the ith largest item from the max heap and place that item back into the array, j slots from the end. This takes O(Nlog2*N) steps.
+1. Remove the biggest value from the heap and reheapify (repeat step 1) to free up the last slot in the array.
+2. Place it in the last open slot of the array
+
+Big-O Explanation: O(N) + O(Nlog2(N)) = O(Nlog2(N))
 
