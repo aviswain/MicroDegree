@@ -188,3 +188,101 @@ for (int i = 0; i < n; i++) {
 }
 ```
 O(nlogn)
+## Big-O for Multi-Input Algorithms
+When an algorithm relies on the input of two different variables, you have to account for both of them in your Big-O analysis. This is because either variable may end up dominating the other depending on how large they were to start. You still must eliminate the lower-order terms for each independent variable though.
+
+For example, this function is O(c^2 + e)
+```
+void tinder(string csmajors[], int c, string eemajors[], int e) {
+  for (int i=0; i < c ;i++)
+    for (int j=0; j < c ;j++)
+      cout << csmajors[i] << “ dates “ << csmajors[j] << endl;
+
+  for (int m=0; m < c ; m++)
+    cout << csmajors[m] << “ is still a nerd”;
+
+  for (int k=0; k < e ;k++)
+    cout << eemajors[k] << “ sits at home“
+}
+```
+
+## Even more challenge problems
+```
+void bar( int n, int q ) {
+  for (int i=0 ; i < n*n ; i++) {
+    for (int j = 0; j < q; j++)
+      cout << “I love CS!”;
+  }
+}
+```
+O(n^2 * q)
+______________________________________________________
+```
+void bletch( int n, int q ) {
+  for (int i=0 ; i < n ; i++)
+    cout << “Muahahaha!”;
+
+  for (int i=0 ; i < q*q ; i++)
+    cout << “Vomit!”;
+}
+```
+O(n + q^2)
+______________________________________________________
+```
+void burp( int n )
+{
+  for (int i=0 ; i < n ; i++)
+    cout << “Muahahaha!”;
+  for (int i=0 ; i < n*n ; i++)
+    cout << “Vomit!”;
+}
+```
+O(n^2)
+______________________________________________________
+```
+void barf( int n, int q ) {
+  for (int i=0 ; i < n ; i++) {
+    if (i == n/2) {
+      for ( int k = 0; k < q; k++ )
+        cout << “Muahahaha!”;
+    } else {
+        cout << “Burp!”;
+    }
+}
+```
+O(n + q)...we only run the inner loop just once, when "i" is equal to (n/2). We do not run the inner loop on all of the N items!
+## STL Big-O Cheat Sheet
+### Vector
+- Inserting an item (top, or middle): `O(n)`
+- Inserting an item (bottom): `O(1)`
+- Deleting an item (top, or middle): `O(n)`
+- Deleting an item (bottom): `O(1)`
+- Accessing an item (top, middle, or bottom): `O(1)`
+- Finding an item: `O(n)`
+
+### List (aka Linked Lists)
+- Inserting an item (top, middle*, or bottom): `O(1)`
+- Deleting an item (top, middle* or bottom): `O(1)`
+- Accessing an item (top, or bottom): `O(1)`
+- Accessing an item (middle): `O(n)`
+- Finding an item: `O(n)`
+
+\* But to get to the middle, you may have to first iterate through X items, at cost O(x)
+
+### Map
+- Inserting a new item: `O(logn)`
+- Finding an item:  `O(logn)`
+- Deleting an item: `O(logn)`
+
+### Queue and Stack
+- Inserting a new item: `O(1)`
+- Popping an item: `O(1)`
+- Examining the top: `O(1)`
+
+### Set
+- Inserting a new item: `O(logn)`
+- Finding an item: `O(logn)`
+- Deleting an item: `O(logn)`
+
+
+
