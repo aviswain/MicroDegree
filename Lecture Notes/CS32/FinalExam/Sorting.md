@@ -25,7 +25,9 @@ Vicki – 8 days                          Michael – 4 days
 Andrea – 5 days                         David – 2 days
 ```
 
-## Inefficient Sorting
+## Inefficient Sorting Algorithms
+_Selection Sort, Insertion Sort, Bubble Sort_
+
 Basic Facts:
 - All slow algorithms generally require O(N^2) steps to order N values. 
 - They compare every item to every other item, swapping out-of-order items.
@@ -128,3 +130,12 @@ void bubbleSort(int Arr[], int n) {
 - Start by assuming that we won’t do any swaps
 - Compare each element with its neighbor and swap them if they’re out-of-order. Don’t forget-we swapped (set atLeastOneSwap to true)!
 - If we swapped at least once, then start back at the top and repeat the whole process.
+## Efficient Sorting Algorithms
+_Quicksort and Mergesort_
+
+Basic Facts
+- generally require O(N*log2(N)) steps.
+- They are "Divide and Conquer" algorithms...
+  1. Divide the elements to be sorted into two groups of roughly equal size.
+  2. Sort each of these smaller groups of elements (conquer) using recursion.
+  3. Combine the two sorted groups into one large sorted group.
