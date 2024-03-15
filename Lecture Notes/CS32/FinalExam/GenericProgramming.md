@@ -25,3 +25,34 @@
 - Try to pass templated items by const reference if you can (to improve performance):
   - Bad: `template <typename ItemType> void foo(ItemType x)`
   – Good: `template <typename ItemType> void foo(const ItemType &x)`
+
+## Custom Comparison Operators
+- All comparison operators must return a boolean value and take **const reference** parameters
+- If you are defining your comparison operator outside your class, then you need two parameters, one for each of the two operands
+- If you are defining inside your class make sure it is a **const** member function and takes in a single "other" parameter. This will be used to refer to the object that is on the right side of the operator.(If a < b, b is on the right side and should be the one referred to by "other"). Also when defining inside your class, you are able to access private member variables for your comparisons. You cannot do this if defining outside your class and will need to use getter functions to access certain values.
+
+```
+.cpp
+
+class Dog {
+  public:
+    bool operator<(const Dog &other) const {
+      if (m_weight < other.m_weight)
+        return true;
+      return false; // otherwise
+    }
+
+    int getWeight() const {
+      return m_weight;
+    }
+    ...
+  private:
+    int m_weight;
+}
+
+bool operator>=(const Dog &a, const Dog &b) {
+  if (a.getWeight() >= b.getWeight())
+    return true;
+  return false; // otherwise
+}
+```
