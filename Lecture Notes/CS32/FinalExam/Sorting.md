@@ -66,8 +66,6 @@ void selectionSort(int A[], int n) {
 - More or less efficient on specific data?
   - Yes, if all the items are already roughly in order, insertion sort never needs to do any shifting! In this case, it is rougly O(N) steps to sort.
     Conversely, a perfectly mis-ordered set of items (sorted backwards) is the worst case. Since every round requires the maximum shifts!
-
-PSUEDOCODE
 ```
 Start with set size s = 2
   While there are still books to sort:
@@ -77,23 +75,23 @@ Start with set size s = 2
       Shift the books before it to the right, as necessary
       Insert our book into the proper slot
 ```
+1. Focus on successively larger prefixes of the array.Start with the first s=2 elements, then the first s=3 elements...
+2. Make a copy of the last val in the current set – this opens up a slot in the array for us to shift items!
+3. Shift the values in the focus region right until we find the proper slot for sortMe.
+4. Store the sortMe value into the vacated slot.
 ```
 void insertionSort(int A[], int n) {
-  for(int s = 2; s <= n; s++) {                 // Focus on successively larger prefixes of the array.
-                                                   Start with the first s=2 elements, then the first
-                                                   s=3 elements...
+  for(int s = 2; s <= n; s++) {                 
 
-    int sortMe = A[s - 1];                      // Make a copy of the last val in the current set –
-                                                   this opens up a slot in the array for us
-                                                   to shift items!
-
+    int sortMe = A[s - 1];
+                      
     int i = s - 2;
-    while (i >= 0 && sortMe < A[i]) {           // Shift the values in the focus region right until
-      A[i+1] = A[i];                               we find the proper slot for sortMe.
+    while (i >= 0 && sortMe < A[i]) {           
+      A[i+1] = A[i];                               
       --i;
     }
 
-    A[i+1] = sortMe;                            // Store the sortMe value into the vacated slot.
+    A[i+1] = sortMe;                            
   }
 }
 ```
