@@ -26,6 +26,23 @@
   - Bad: `template <typename ItemType> void foo(ItemType x)`
   – Good: `template <typename ItemType> void foo(const ItemType &x)`
 
+Multi-Type Templates
+```
+.h
+template <typename T, typename U>
+void passTwoTypes(const T& first, const U& second) {
+  cout << "First: " << first << "Second: " << second << endl;
+}
+```
+```
+.cpp
+
+int main() {
+  passTwoTypes(123, "Hello World!");
+  passTwoTypes(3.14, 42);
+}
+```
+
 ## Custom Comparison Operators
 - All comparison operators must return a boolean value and take **const reference** parameters
 - If you are defining your comparison operator outside your class, then you need two parameters, one for each of the two operands
