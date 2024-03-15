@@ -96,3 +96,35 @@ void insertionSort(int A[], int n) {
 }
 ```
 ### Bubble Sort
+- How to recognize?
+  - After one iteration, the largest item should always be in the last slot. After two iterations, the two largest items should be in the right order of the last two slot...and so on.
+- One line summary?
+  - Compare the first two elements...if they are out of order, swap them. Compare the next two elements, if they are out of order swap them. Repeat until end of array. If you made at
+    least one swap on the way down, repeat the whole process again.
+- More or less efficient on specific data?
+  - Just like Insertion Sort, Bubble Sort is really efficient on pre-sorted arrays and linked lists!
+
+1. Start at the top element of your array
+2. Compare the first two elements: A[0] and A[1] If they’re out of order, then swap them
+3. Then advance one element in your array...Compare these two elements: A[1] and A[2] If they’re out of order, swap them
+4. Repeat this process of comparing A[j] with A[j+1] and swapping if they’re out of order until you hit the end of the array
+5. When you hit the end of the array, if you made at least one swap on your way down, then start back at the top and repeat the whole process again!
+
+```
+void bubbleSort(int Arr[], int n) {
+  bool atLeastOneSwap;
+
+  do {
+    atLeastOneSwap = false;
+    for (int j = 0; j < (n-1); j++) {
+      if (Arr[j] > Arr[j + 1]) {
+        Swap(Arr[j],Arr[j+1]);
+        atLeastOneSwap = true;
+      }
+    }
+  } while (atLeastOneSwap == true);
+}
+```
+- Start by assuming that we won’t do any swaps
+- Compare each element with its neighbor and swap them if they’re out-of-order. Don’t forget-we swapped (set atLeastOneSwap to true)!
+- If we swapped at least once, then start back at the top and repeat the whole process.
