@@ -17,7 +17,7 @@ Now that you know my point of view, here is what I am doing about it:
     - This idea might be hard for some professors/teachers to grasp, but if you ask any college student, they will often tell you that they have experienced something like it before.
       It's just the truth. Sometimes being a genius does not qualify you as being the best teacher. Ouch! Sorry...
 
-So I have decided that the best way is to learn things on my own and take notes along the way. Maybe if someone is learning on their own as well, these notes will be helpful.
+So I have decided that the best way to learn things is on my own and taking notes along the way. 
 
 What follows is a Computer Science and Engineering degree designed the way I would teach it from the way I have learned it.
 
