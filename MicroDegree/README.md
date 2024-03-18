@@ -4,7 +4,7 @@ You might be thinking that makes no sense. Consider the following experiences I 
 - I got some low grades during my freshman winter quarter, which was pretty discouraging
 - During the only free time I got during that quarter (which was not much), I spent 90% of it trying to learn as much as I can about neural networks. Although I learned stuff, I came
   out of it thinking that it was not worth it at all to explore my own interests during the school year because my grades suffered
-- I find myself wanting to learn more and more while on break. My mind is actively looking for the next topic,
+- I find myself wanting to learn more and more while on break. My mind is actively looking for the next topic to understand.
 - I find myself wanting to just stop learning during the quarter. Grades reward memorization far more than understanding.
 
 Now that you know my point of view, here is what I am doing about it:
@@ -12,7 +12,7 @@ Now that you know my point of view, here is what I am doing about it:
   curiosities go, ask them to the experts (i.e. the professor and TAs).
 - I have found the wrong way to go is leaning on them for learning and teaching. At the end of the day, a professor might not be the best teacher but they will be an EXPERT in their
   field. Professors aren't required to get education degrees like grade-school teachers. Instead they are only qualified to teach because their understanding of a subject is at an
-  extremely high level. There is a drawback to this though: there is a common enough scenario where you are getting taught by someone who is extremely smart but has no idea how to explain
+  extremely high level. There is a drawback to this though: there is a extremely common scenario where you are getting taught by someone who is extremely smart but has no idea how to explain
   the concepts of their field to someone who has never been in it before.
     - This idea might be hard for some professors/teachers to grasp, but if you ask any college student, they will often tell you that they have experienced something like it before.
       It's just the truth. Sometimes being an genius does not qualify you as being the best teacher.
@@ -28,4 +28,9 @@ What follows is a Computer Science and Engineering degree designed the way I wou
    to tell the world that YOU know something about CSE...not that you and your friends when put together know something about CSE. So you might get your dream job by putting this on
    your resume, but if you don't know what you are doing there and are always asking easy-to-answer questions, you will also lose your dream job by putting this on your resume (that      is if you cheat). So my advice is don't.
 4) When possible I will always test your understanding by the closest format to what you will be doing in the real world. That means projects are always > QnA tests.
-5) 
+5) Don't contact me. If you have a question about the material ask the internet (that's how I learned!). I am not your best friend. I am not your homie. I am a resource for learning
+   and that's it. Like you, I also have things I want to do in my free time.
+
+_You might be wondering, where the crap did I come up with this? Well as a student, you learn to know what you like and what you don't when it comes to having a good
+teacher. The points above are all made in inspiration of a few professors and teachers I have had during my life. Here are a few of them along with the good things I have to say about them:_
+
