@@ -20,3 +20,12 @@ Now that you know my point of view, here is what I am doing about it:
 So I have decided that the best way is to learn things on my own and take notes along the way. Maybe if someone is learning on their own as well, these notes will be helpful.
 
 What follows is a Computer Science and Engineering degree designed the way I would teach it from the way I have learned it.
+
+## Philosophy of Teaching
+1) Material will reflect exactly what you need to know in real life. I will not play games such as only doing simple examples in lecture and then testing you in complex ways on the       exam or projects. I will teach exactly how I will test.
+2) If you do not understand something, do not move forward to the next lecture. I have designed each lecture in a way such that it relies on a full understanding of the topics that       come beforehand.
+3) If you cheat (discuss individual-assigned work with others, look at code from others, or anything related) I don't care. But what I will say is that you are getting this degree
+   to tell the world that YOU know something about CSE...not that you and your friends when put together know something about CSE. So you might get your dream job by putting this on
+   your resume, but if you don't know what you are doing there and are always asking easy-to-answer questions, you will also lose your dream job by putting this on your resume (that      is if you cheat). So my advice is don't.
+4) When possible I will always test your understanding by the closest format to what you will be doing in the real world. That means projects > QnA tests.
+5) 
