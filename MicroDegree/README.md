@@ -28,7 +28,7 @@ What follows is a Computer Science and Engineering degree designed the way I wou
    to tell the world that YOU know something about CSE...not that you and your friends when put together know something about CSE. So you might get your dream job by putting this on
    your resume, but if you don't know what you are doing there and are always asking easy-to-answer questions, you will also lose your dream job by putting this on your resume (that      is if you cheat). So my advice is don't.
 4) When possible I will always test your understanding by the closest format to what you will be doing in the real world. That means projects are always > QnA tests.
-5) Don't contact me. If you have a question about the material ask the internet (that's how I learned!). I am not your best friend. I am not your homie. I am a resource for learning
+5) Don't contact me. If you have a question about the material ask the internet (that's how I learned this stuff!). I am not your best friend. I am not your homie. I am a resource for learning
    and that's it. Like you, I also have things I want to do in my free time.
 
 _You might be wondering, where the crap did I come up with this? Well as a student, you learn to know what you like and what you don't when it comes to having a good
