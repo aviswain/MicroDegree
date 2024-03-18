@@ -28,9 +28,12 @@ What follows is a Computer Science and Engineering degree designed the way I wou
    to tell the world that YOU know something about CSE...not that you and your friends when put together know something about CSE. So you might get your dream job by putting this on
    your resume, but if you don't know what you are doing there and are always asking easy-to-answer questions, you will also lose your dream job by putting this on your resume (that      is if you cheat). So my advice is don't.
 4) When possible I will always test your understanding by the closest format to what you will be doing in the real world. That means projects are always > QnA tests.
-5) Don't contact me. If you have a question about the material ask the internet (that's how I learned this stuff!). I am not your best friend. I am not your homie. I am a resource for learning
-   and that's it. Like you, I also have things I want to do in my free time.
+5) Don't contact me. If you have a question about the material ask the internet (that's how I learned this stuff!). I am not your best friend. I am not your homie. I am a resource for learning and that's it. Like you, I also have things I would like to do in my free time.
 
 _You might be wondering, where the crap did I come up with this? Well as a student, you learn to know what you like and what you don't when it comes to having a good
-teacher. The points above are all made in inspiration of a few professors and teachers I have had during my life. Here are a few of them along with the good things I have to say about them:_
-
+teacher. The points above are all made in inspiration of a few professors and teachers I have had during my life. Although I am not running all of this exactly like them, I have learned a lot about what makes a good professor by watching them work. Here are a few of them along with the good things I have to say about them:_
+- _CS M51A Professor (Omid) Abari: Teaches the course exactly like 1 and 2 and doesn't allow discussion with homeworks. He the fairest professor I've ever had. He also pretty funny._
+- _CS31 & 32 Professor (David) Smallberg: Knows every single detail and edge case in what he does. Answers every question in a way that leaves you 200% satisfied. Organizes the course with perfection: If you read his project specs, it is better than some lawyers!_
+- _CS 32 Professor (Carey) Nachenberg: Created the best on-your-own study materials that I have ever used. His slides cover everything needed to do well in the course and more._
+- _English Teacher Mrs. (Cathie) Boone: Taught me the most important lesson in education; that understanding and interest in course material is always superior to having a good grade in the class. This might be blatantly obvious, but this is very hard to grasp as a student. Especially when you know how visible grades are in any application process._
+- _Math Teacher Mr. (David) Hale: Designed the class in a way that highly rewarded getting extra practice in (to the point that it was almost unfair if you did the optional practice problems when compared to the regular classwork, because the tests were extremely similar to the extra problem sets)._
