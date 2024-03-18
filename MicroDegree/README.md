@@ -27,5 +27,5 @@ What follows is a Computer Science and Engineering degree designed the way I wou
 3) If you cheat (discuss individual-assigned work with others, look at code from others, or anything related) I don't care. But what I will say is that you are getting this degree
    to tell the world that YOU know something about CSE...not that you and your friends when put together know something about CSE. So you might get your dream job by putting this on
    your resume, but if you don't know what you are doing there and are always asking easy-to-answer questions, you will also lose your dream job by putting this on your resume (that      is if you cheat). So my advice is don't.
-4) When possible I will always test your understanding by the closest format to what you will be doing in the real world. That means projects > QnA tests.
+4) When possible I will always test your understanding by the closest format to what you will be doing in the real world. That means projects are always > QnA tests.
 5) 
