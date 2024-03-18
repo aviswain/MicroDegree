@@ -15,7 +15,7 @@ Now that you know my point of view, here is what I am doing about it:
   extremely high level. There is a drawback to this though: there is a common scenario where you are getting taught by someone who is extremely smart but has no idea how to explain
   the concepts of their field to someone who has never been in it before.
     - This idea might be hard for some professors/teachers to grasp, but if you ask any college student, they will often tell you that they have experienced something like it before.
-      It's just the truth. Sometimes being an genius does not qualify you as being the best teacher.
+      It's just the truth. Sometimes being a genius does not qualify you as being the best teacher. Ouch! Sorry...
 
 So I have decided that the best way is to learn things on my own and take notes along the way. Maybe if someone is learning on their own as well, these notes will be helpful.
 
