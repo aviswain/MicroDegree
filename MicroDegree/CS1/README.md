@@ -1,5 +1,5 @@
 # CS1. Computer Programming (Python)
-In every college Computer Science program, there are always three classes that first-year undergraduates have to take: Intro to Programming, Data Structures, and Computer Archicture. 
+In every college Computer Science program, there are always three classes that first-year undergraduates have to take: Intro to Programming, Data Structures, and Computer Architecture. 
 
 Depending on the university, a certain computer programming language might be favored. For example, at the time that I am writing this, the Ohio State University uses Java for its intro and data structures courses while UCLA uses C++. Although colleges might favor a certain language, it is not for the reasons you might think.
 
