@@ -10,6 +10,7 @@ Learn the foundational concepts of...
 - Computer Architecture
 
 ## Lecture Topics
+
 | Lec | Topic|
 | --- | --- |
 | 1 | Syntax, Comments, Variables, Data Types |
