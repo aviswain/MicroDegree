@@ -30,8 +30,11 @@ Project 1
 Project 2
 Final Project
 ## Design Decisions of this Course
+
+### How did you choose these topics?
 In every college Computer Science program, there are always three classes that first-year undergraduates have to take: Intro to Programming, Data Structures, and Computer Architecture. I made this course encompass all of them because they just build on top of each other. 
 
+### Why did you choose Python?
 Depending on the university, a certain computer programming language might be favored. For example, at the time that I am writing this, the Ohio State University uses Java for its intro and data structures courses while UCLA uses C++. Although colleges might favor a certain language, it is not for the reasons you might think. 
 
 Most of the time it's because they have been teaching the language for so long and have put a lot of work into creating the educational material around it (exams, projects, homework, etc.). Also, the language still happens to be relevant...so there is no point in switching!
