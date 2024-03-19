@@ -6,7 +6,7 @@ Learn the specification and implementation of combinational and sequential syste
 ## Lecture Topics
 | Lec # | Topic|
 | --- | --- |
-| 1 | Intro to Systems, Binary |
+| 1 | Introduction |
 | 2 |  |
 | 3 |  |
 | 4 |  |
