@@ -1,7 +1,10 @@
 # CS1. Computer Programming (Python)
 
 ## Course Objectives
-Learn the foundational concepts and principles of programming, data structures, 
+Learn the foundational concepts of...
+- Structure and Interpretation of Computer Programs
+- Data Structures
+- Computer Architecture
 
 ## Lecture Topics
 Variables
