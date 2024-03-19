@@ -11,7 +11,7 @@ Learn the foundational concepts of...
 
 ## Lecture Topics
 
-| Lec | Topic|
+| Lec # | Topic|
 | --- | --- |
 | 1 | Syntax, Comments, Variables, Data Types |
 | 2 | If-Statements, Loops |
