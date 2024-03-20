@@ -1,1 +1,1 @@
-- Go to TA office hours during free time and ask them to come up with questions for you to understand the concepts bette
+- Go to TA office hours during free time and ask them to come up with questions for you to understand the concepts better
