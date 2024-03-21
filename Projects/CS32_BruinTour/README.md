@@ -66,7 +66,7 @@ Total tour distance: 1.758 miles
 
 
 ### Generating an optimized path
-For finding the best route between tour stops, I used the A* algorithm. In short, it works by applying a heuristic function to Dijkstra's Algorithm that lets the actor know if they are moving closer towards their goal or not. If you are interesting in implementing it yourself, here are some of the resources I found extremely helpful!
+For finding the best route between tour stops, I used the A* algorithm. In short, it works by applying a heuristic function to Dijkstra's Algorithm that lets the actor know if they are moving closer towards their goal or not. If you are interested in implementing it yourself, here are some of the resources I found extremely helpful!
 - [A* (A Star) Search and Heuristics Intuition in 2 minutes](https://youtu.be/71CEj4gKDnE?si=dfaIGbBFZQcVVW8F)
 - [Introduction to the A* Algorithm](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
 - [Implementation of A*](https://www.redblobgames.com/pathfinding/a-star/implementation.html#algorithm)
