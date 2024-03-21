@@ -76,6 +76,6 @@ Here is a video of me running it on UCLA's g32 server. No memory leaks! And its 
 - [BruinTour Demo](https://youtu.be/4yM35dsAk-s)
 
 ### Applications
-I could see this route-generating process being extremely helpful for food delivery bots. Of course I'd have to make sure it doesn't cross the road when cars are going by...
+I could see this route-generating process being extremely helpful for food delivery bots. Of course I'd have to make sure the robot doesn't cross the road when cars are going by...
 
 ...or maybe I could make it indestructible!
