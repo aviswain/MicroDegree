@@ -1,4 +1,6 @@
 # BruinTour
+![tinyrobot](robot.jpg)
+
 Automated tour guide system that loads and indexes a bunch of Open Street Map geospatial data (which contain latitude and longitude data for thousands of streets) along with a list of 
 points of interest and then uses this data to generate a relatively optimized set of instructions for the tour. 
 
@@ -69,11 +71,11 @@ For finding the best route between tour stops, I used the A* algorithm. In short
 - [Introduction to the A* Algorithm](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
 - [Implementation of A*](https://www.redblobgames.com/pathfinding/a-star/implementation.html#algorithm)
 
-### Watch it run
+### Demo
 Here is a video of me running it on UCLA's g32 server. No memory leaks! And its fast!
 - [BruinTour Demo](https://youtu.be/4yM35dsAk-s)
 
+### Applications
+I could see this route-generating process being extremely helpful for food delivery bots. Of course I'd have to make sure it doesn't cross the road when cars are going by...
 
-This was my final project for CS 32, which is UCLA's data structures course taught in C++. The code in the enclosed folder "provided" was code that was given by the professors. I implemented the other files in "my_work". The report.txt is a file that were required to submit along with our project. "spec.pdf" has the details of this assignment.
-
-
+...or maybe I could make it indestructible!
