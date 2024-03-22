@@ -14,3 +14,8 @@ Learn the fundamentals of tools and environments for software construction proje
 | 6 | Change management |
 | 7 | Low-level construction and debugging |
 | 8 | Security basics |
+
+## Other Resources
+- [Vincent Vinlin's UCLA CS 35L Notebooks](https://github.com/vinlin24/cs35l-notebooks)
+- [LA  Qianli Wu's Notes](https://github.com/Qianli-Wu/CS35L_notes)
+- [LA Ning Wang's Notes](https://github.com/NingWang1729/Introduction-to-Software-Construction)
