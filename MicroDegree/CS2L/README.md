@@ -1,4 +1,4 @@
-# CS 2L. Into to Software Engineering 
+# CS 2L. Intro to Software Engineering Lab
 
 ## Course Objectives
 Learn the fundamentals of tools and environments for software construction projects, particularly open-source platforms.
