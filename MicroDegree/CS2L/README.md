@@ -16,7 +16,7 @@ Learn the fundamentals of tools and environments for software construction proje
 | 8 | Security basics |
 
 ## Other Resources
-Since I am matching the material of this class to the one I took at UCLA, here are some other peoples' notes from the formal course taught to us.
+Since I am matching the material of this class to the one I took at UCLA, here are some other peoples' notes from the course.
 - [Vincent Vinlin's UCLA Notebooks](https://github.com/vinlin24/cs35l-notebooks)
 - [LA  Qianli Wu's Notes](https://github.com/Qianli-Wu/CS35L_notes)
 - [LA Ning Wang's Notes](https://github.com/NingWang1729/Introduction-to-Software-Construction)
