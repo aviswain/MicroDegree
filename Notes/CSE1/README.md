@@ -1,7 +1,7 @@
 # CSE 1. Logic Design of Digital Systems
 Original Course: _CS M51A Winter 2024 taught by Prof. (Omid) Abari at UCLA_
 
-Course Changes: _None_
+Changes: _None_
 
 ## Why do I have to take this course?
 As a CSE major, there might come a time in the future where you need to understand how a computer works from the inside-out. 
