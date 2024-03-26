@@ -1,5 +1,5 @@
 # CSE 1. Logic Design of Digital Systems
-Original Course: _CS M51A Winter 2024 taught at UCLA by Prof. (Omid) Abari_
+Original Course: _CS M51A Winter 2024 taught by Prof. (Omid) Abari at UCLA_
 
 Course Changes: _None_
 
