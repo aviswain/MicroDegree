@@ -1,1 +1,1 @@
-Notes from college...reorganized the way I like it.
+Notes from college...reorganized 
